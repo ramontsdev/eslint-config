@@ -93,7 +93,7 @@ export default [
             'index'
           ],
           alphabetize: { order: 'asc', caseInsensitive: true },
-          'newlines-between': 'never'
+          'newlines-between': 'always'
         }
       ],
 
