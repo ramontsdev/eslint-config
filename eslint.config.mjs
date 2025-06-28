@@ -1,10 +1,9 @@
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
 import js from '@eslint/js';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -70,7 +69,7 @@ export default [
     },
     rules: {
       // TypeScript rules
-      '@typescript-eslint/no-unused-vars': 'error',
+      // '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/naming-convention': 'off',
 
@@ -173,6 +172,18 @@ export default [
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/no-misused-promises': 'error',
       '@typescript-eslint/promise-function-async': 'error',
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          // "args": "all",
+          "argsIgnorePattern": "^_",
+          // "caughtErrors": "all",
+          // "caughtErrorsIgnorePattern": "^_",
+          // "destructuredArrayIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          // "ignoreRestSiblings": true
+        }
+      ]
       // '@typescript-eslint/naming-convention': [
       //   'error',
       //   {
